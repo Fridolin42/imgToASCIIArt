@@ -5,6 +5,10 @@ import kotlin.math.sqrt
 
 class Pixel(val x: Int, val y: Int, val color: Color) {
     val clusters: ArrayList<Cluster> = ArrayList()
+    var top: Pixel? = null
+    var left: Pixel? = null
+    var bottom: Pixel? = null
+    var right: Pixel? = null
 
     init {
         addToCluster(Cluster())

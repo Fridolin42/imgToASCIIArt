@@ -4,7 +4,15 @@ import javax.imageio.ImageIO
 
 fun main() {
     val img = ImageIO.read(File("imgIn"))
-    val pixels = Array(img.width) {x -> Array(img.height) {y-> Pixel(x, y, Color(img.getRGB(x, y))) } }
+    val pixels = Array(img.width) { x -> Array(img.height) { y -> Pixel(x, y, Color(img.getRGB(x, y))) } }
+    for (x in 0 until img.width)
+        for (y in 0 until img.height) {
+            if (x > 0) pixels[x][y].left = pixels[x - 1][y]
+            if (y > 0) pixels[x][y].bottom = pixels[x][y - 1]
+            if (x < img.width - 1) pixels[x][y].right = pixels[x + 1][y]
+            if (y < img.height - 1) pixels[x][y].top = pixels[x][y + 1]
+        }
+
     repeat(25) {
         for (pixelColum in pixels) {
             for (pixel in pixelColum) {
