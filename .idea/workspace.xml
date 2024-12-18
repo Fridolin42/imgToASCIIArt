@@ -5,22 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ae9d1552-a0d2-4f51-9170-a64e6b3a1d0a" name="Changes" comment="Pixel and Cluster Object&#10;basic Cluster spreading">
-      <change afterPath="$PROJECT_DIR$/imgIn/albert.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imgIn/test.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imgOut/out_albert0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imgOut/out_albert1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imgOut/out_albert2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imgOut/out_albert3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imgOut/out_albert4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imgOut/out_albert5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imgOut/out_albert6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imgOut/out_albert7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/imgOut/out_test0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ImageNoiseSuppressor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/KotlinJavaRuntime.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Cluster.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Cluster.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Pixel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Pixel.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,10 +66,10 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15234375",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.kotlinCompiler",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>

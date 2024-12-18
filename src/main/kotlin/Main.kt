@@ -8,17 +8,22 @@ import kotlin.math.min
 
 fun main() {
     val input = "albert"
-    val img = ImageIO.read(File("./imgIn/$input.png"))
+    var img = ImageIO.read(File("./imgIn/$input.png"))
+    img = ImageNoiseSuppressor.applyBilateralFilter(img, 15, 4.0, 100.0)
     val imgOut = filterImage(clusterImage(img))
     ImageIO.write(imgOut, "png", File(genImgName(input)))
 }
 
 fun filterImage(img: BufferedImage): BufferedImage {
-    for (x in 0..<img.width)
-        for (y in 0..<img.height)
+    for (x in 0 until img.width) {
+        if (x % ((img.width - 1) / 100) == 0)
+            print("\r$x/${img.width - 1}")
+        for (y in 0 until img.height)
             if (Color(img.getRGB(x, y)) == Color.BLACK &&
-                calcBorderClusterSize(x, y, deepCopy(img)) < 10
+                    calcBorderClusterSize(x, y, deepCopy(img)) < 10
             ) img.setRGB(x, y, Color.white.rgb)
+    }
+    println("\ndone")
     return img
 }
 
@@ -40,8 +45,8 @@ fun clusterImage(img: BufferedImage): BufferedImage {
     }
     println("\ndone")
     val imgOut = BufferedImage(img.width, img.height, BufferedImage.TYPE_INT_RGB)
-    for (x in 0..<img.width)
-        for (y in 0..<img.height)
+    for (x in 0 until img.width)
+        for (y in 0 until img.height)
             imgOut.setRGB(x, y, pixels[x][y].calcBorderColor(pixels).rgb)
     return imgOut
 }
@@ -50,7 +55,11 @@ fun genImgName(inputName: String): String {
     val files = File("./imgOut").listFiles()?.map { it.nameWithoutExtension }
     files?.let {
         for (i in 0..Int.MAX_VALUE)
-            if (!files.contains("out_$inputName$i")) return "./imgOut/out_$inputName$i.png"
+            if (!files.contains("out_$inputName$i")) {
+                val out = "./imgOut/out_$inputName$i.png"
+                println(out)
+                return out
+            }
     }
     throw Error("Please Clean your folder")
 }
